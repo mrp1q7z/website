@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>第１章 はじめに</title>
+</head>
+
+<body>
+
+<p><b><font size="4" color="#0000FF">第１章　概要</font></b></p>
+<hr>
+<p><b><a name="1">はじめに</a></b></p>
+<blockquote>
+  <p><font size="2">この度は「バグまね」をダウンロードしていただき、ありがとうございます。<br>
+  本ドキュメントは「バグまね」の操作等について説明した資料です。<br>
+  なお、「バグまね」とはバグマネージャー（バグ管理）のバグとマネージャーのマネから命名されました。<br>
+  <font color="#FF0000">「バグまね」でバグねー！</font>（バグが無い）状態になることに貢献できたら幸いです。</font></p>
+</blockquote>
+<p><b><a name="2">バグまねとは</a></b></p>
+<blockquote>
+  <p><font size="2">バグ（不具合）を蓄積し、管理し、分析するためのツールです。</font></p>
+  <table border="1" width="500" bordercolor="#808080" cellpadding="2" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080">
+    <tr>
+      <td width="59" bgcolor="#C0C0C0"><font size="2">蓄積</font></td>
+      <td width="527" bgcolor="#FFFFFF"><font size="2">だれが、いつ、どんなバグを発見した。</font></td>
+    </tr>
+    <tr>
+      <td width="59" bgcolor="#C0C0C0"><font size="2">管理</font></td>
+      <td width="527" bgcolor="#FFFFFF"><font size="2">いつまでに、だれが、対応するのか。<br>
+        だれが、どのように対応したのか。</font></td>
+    </tr>
+    <tr>
+      <td width="59" bgcolor="#C0C0C0"><font size="2">分析</font></td>
+      <td width="527" bgcolor="#FFFFFF"><font size="2">バグの原因はなんだったのか。<br>
+        バグは減っているのか増えているのか。<br>
+        どこにバグが集中しているのか。<br>
+        バグの対処にかかった時間は？</font></td>
+    </tr>
+  </table><br>
+  <font size="2">またプログラムリリース時にどのバグが対処されたのかを調べるリリース管理機能もあります。<br>
+  例）<br>
+  2003/11/01にVersion1.0をリリース<br>
+  2003/11/20にVersion1.1をリリース<br>
+  Version1.0とVersion1.1の相違点は？ → Bug1, Bug3, Bug4が対処された。</font>    
+</blockquote>
+<p><b><a name="3">利用イメージ</a></b></p>
+
+<blockquote>
+<p><img border="2" src="images/UseImage.jpg" width="555" height="477"></p>
+
+<table border="1" width="560" bordercolor="#808080" cellpadding="2" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080">
+  <tr>
+    <td width="100" bgcolor="#C0C0C0"><font size="2">発見者</font>
+    </td>
+    <td width="464" bgcolor="#FFFFFF"><font size="2">
+バグを発見する人。通常はテスター（テストを担当する人）。<br>
+ブラウザからバグまねサーバに接続し、発見したバグを新規登録する。<br>
+また、変更要望等があった場合も新規にバグ票を登録する。</font>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" bgcolor="#C0C0C0"><font size="2">バグ受付者</font>
+    </td>
+    <td width="464" bgcolor="#FFFFFF"><font size="2">
+システムの仕様を理解しており、バグの切り分けができる人。<br>
+ブラウザからバグまねサーバに接続し、新規登録されたバグ票を検索する。<br>
+新規バグの内容を判断し、バグの対処者・対処期限等を登録する。</font>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" bgcolor="#C0C0C0"><font size="2">バグ対処者</font>
+    </td>
+    <td width="464" bgcolor="#FFFFFF"><font size="2">
+バグを対処する人。通常はプログラマー。<br>
+ブラウザからバグまねサーバに接続し、対処すべきバグがないか検索する。<br>
+自分宛のバグ票の対処を行い、対処内容を記入する。</font>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" bgcolor="#C0C0C0"><font size="2">確認者</font>
+    </td>
+    <td width="464" bgcolor="#FFFFFF"><font size="2">
+ブラウザからバグまねサーバに接続し、対処済みバグ票を検索する。<br>
+対処済みバグの確認を行い、確認結果を記入する。<br>
+発見者と同一人物になる場合もある。</font>
+    </td>
+  </tr>
+</table>
+　
+</blockquote>
+<p><b><a name="5">システム構成図</a></b></p>
+
+<blockquote>
+  <p><img border="2" src="images/SysArchitecture.jpg" width="679" height="337"></p>
+  <table border="1" width="600" bordercolor="#808080" cellpadding="2" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080">
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">
+【クライアント】&nbsp;</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">
+以下のソフトが動作すること</font></td>
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">Webブラウザ</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">
+Microsoft Internet Explorer 5.0 以上</font></td>     
+    </tr>
+  </table>
+  <font size="2"><br>
+  </font>
+  <table border="1" width="600" bordercolor="#808080" cellpadding="2" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080">
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">
+
+【サーバ】</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">
+.Net Framework 1.1 が動作すること</font></td>     
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">IIS</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">Microsoft Internet Information Server 5.0</font></td> 
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">.Net Framework</font></td> 
+      <td width="500" bgcolor="#FFFFFF"><font size="2">Microsoft .Net Framework 1.1</font></td> 
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">OS</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">Microsoft Windows 2000 (SP3) / Windows XP (SP1) 
+        / Windows Server 2003</font></td> 
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">SQL Server</font></td> 
+      <td width="500" bgcolor="#FFFFFF"><font size="2">Microsoft SQL Server 7.0　又はMicrosoft Desktop Engine (MSDE) 2000</font></td>    
+    </tr>
+    <tr>
+      <td width="100" bgcolor="#C0C0C0"><font size="2">バグまね</font></td>
+      <td width="500" bgcolor="#FFFFFF"><font size="2">Ver1.0.0 以上</font></td>
+    </tr>
+  </table>
+
+</blockquote>
+
+</body>
+
+</html>

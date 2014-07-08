@@ -1,0 +1,173 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>第７章 その他</title>
+</head>
+
+<body>
+
+<p><font size="4" color="#0000FF"><b>第８章　最後に</b></font></p>
+<hr>
+<p><b><a name="1">ライセンス</a></b></p>
+<blockquote>
+  <p><font size="2">本ソフトウェアはBSDライセンスです。<br>
+  </font></p>
+  <p><font size="2">ライセンスキーは「0041-2124-9895-7919」になります。<br>
+  これを、web.configファイルのライセンスキー(赤い部分)に入力します。<br>
+  また、登録者(青い部分)に登録者の名前を入力します。<br>
+  【注意】これ以外の部分は変更しないでください。動作しなくなる恐れがあります。変更前にバックアップを取られることをお勧めします。</font></p>
+  <table border="1" width="90%">
+    <tr>
+      <td width="95%"><font size="2">&lt;configuration&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;appSettings&gt;<br>             
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add key=&quot;LicenceKey&quot;              
+        value=&quot;<font color="#FF0000">None</font>&quot;              
+        /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add key="Register" value="<font color="#0000FF">未登録</font>" /></font></td>              
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+<p><b><a name="2">著作権</a></b></p>
+<blockquote>
+  <p><font size="2">著作権は作者(4jiokiSoft)が持っております。
+  <br>
+  </font></p>
+</blockquote>
+<p><b><a name="3">免責事項</a></b></p>
+
+<blockquote>
+  <p><font size="2">本ソフトウェアによって、いかなる問題が生じた場合も著作者はその責任を負いません。<br>
+  バージョンアップや不具合に対する対応の責任も負わないものとします。<br>
+  この文書の内容、およびソフトウェアの意匠・仕様は予告なしに変更されることがあります。<br>
+  </font></p>
+
+</blockquote>
+
+<p><b><a name="4">連絡先（サポート）</a></b></p>
+
+<blockquote>
+  <table border="0" width="90%">
+    <tr>
+      <td width="100"><font size="2">Email</font></td>
+      <td width="87%"><font size="2"><a href="mailto:4jiokisoft@gmail.com">4jiokisoft@gmail.com</a></font></td>
+    </tr>
+    <tr>
+      <td width="100"><font size="2">ホームページ</font></td>
+      <td width="87%"><font size="2"><a href="http://4jiokisoft.web.fc2.com/" target="_blank">http://4jiokisoft.web.fc2.com/</a></font></td>
+    </tr>
+  </table>
+  <p></p>
+
+</blockquote>
+
+<p><b><a name="5">制限事項</a></b></p>
+
+<blockquote>
+  <p><font size="2">
+  ●バグの削除はできません。<br>
+  <br>
+  ●ログインした状態で３０分間放置しますと、タイムアウトが発生しセッションが切断されますので、再度ログインする必要があります。<br>
+  タイムアウト時間を変更するには、web.configのtimeout=&quot;30&quot;を変更します。（２ヶ所ありますので２ヶ所とも変更してください）<br>
+  例：3時間に設定する場合、timeout=&quot;180&quot;<br>
+  <br>
+  ●新規リリースで登録した内容の変更はできません。登録内容を確認して登録するようにしてください。<br>
+  <br>
+  ●Javaスクリプトを使用していますので、ブラウザの設定でJavaスクリプトを無効にするになっている場合、正常に動作しないことがあります。<br>
+  <br>
+  ●ポップアップブロッカーにより、バージョン一覧等のポップアップウインドウが開かないことがあります。<br>
+  <br>
+  ●添付資料の表示でファイルのダウンロード画面が2回表示されることがあります。<br>
+  これはIEのバグによるものです。<br>
+  <br>
+  </font><font size="2">●添付資料を開くと、バグ詳細画面が開いた添付資料に置き換えられ戻れなくなることがあります。（閉じるしかない）<br>
+  以下の条件のときに発生します。<br>
+  ・バグ詳細を別ウインドウで表示するをチェックしている。<br>
+  ・開いた添付資料がJPEGファイル、PNGファイル等ブラウザに関連づけされているもの<br>
+  <br>
+  この問題の再現方法を示します。<br>
+  バグ詳細画面でimage001.pngを選択し、「表示」ボタンをクリックする。<br>
+  <img border="0" src="images/restrictions4.png" width="710" height="445"><br>
+  <br>
+  ファイルのダウンロード画面が表示される。ここで「開く」を選択する。<br>
+  （「保存」を選択したときは正常に動作します。）<br>
+  <img border="0" src="images/restrictions6.png" width="463" height="267"><br>
+  <br>
+  image001.pngが、バグ詳細画面と同じウインドウで開かれる。<br>
+  こうなってしまうと、バグ詳細画面に戻れない。一旦ウインドウを閉じて再度バグ詳細を開かないといけない。<br>
+  <img border="0" src="images/restrictions5.png" width="710" height="445"><br>
+  <br>
+  <br>
+  以下の方法により回避することができます。<br>
+  エキスプローラで［ツール］－［フォルダオプション］を選択し、ファイルタイプタブを開きます。<br>
+  拡張子PNGを選択し、「詳細設定」をクリックします。<br>
+  <img border="0" src="images/restrictions1.png" width="448" height="434"><br>
+  <br>
+  ファイルタイプの編集ダイアログが表示されるので、アクションでopenを選択し、「編集」をクリックします。
+  <br>
+  <img border="0" src="images/restrictions2.png" width="403" height="289"><br>
+  <br>
+  アクションの編集で、「DDEを使う」のチェックを外します。
+  <br>
+  <img border="0" src="images/restrictions3.png" width="403" height="330"><br>
+  <br>
+  以上で、添付資料でPNGファイルを開いてもバグ詳細とは別のウインドウで表示されるようになります。<br>
+  </font></p>
+
+</blockquote>
+
+<p><b><a name="6">プログラム変更履歴</a></b></p>
+
+<blockquote>
+  <p><font size="2"><b><u>2005/02/13 Ver2.0.1</u></b><br> 
+  ・ユーザーメンテでユーザー情報の変更、又は削除をしようとすると、ランタイムエラーが発生する、バグの修正。<br>
+  ・権限設定で権限を設定し、OKボタンを押すとランタイムエラーが発生する、バグの修正。<br>
+  ・バグ詳細からバグ一覧へ戻るとき、遷移前の場所に戻るようにした。<br>
+  ・バグ詳細でブラウザの戻るボタンでバグ一覧に戻れるようにした。<br>
+  ・バグ詳細にPrev/Nextボタンを追加し、前／後のバグ詳細が表示できるようにした。<br>
+  ・バグ一覧に表示する項目を変更できるようにした。<br>
+  <br>
+  <b><u>2005/01/19 Ver2.0.0</u></b><br> 
+  ・バグ予想曲線を表示するようにした。<br>
+  ・バグ一覧にフィルタ機能を追加。<br>
+  ・ログアウトしなくても、プロジェクトを切り替えることができるようにした。<br>
+  ・権限選択ができるようにした。<br>
+  ・バグ一覧で列名に△を表示し、どの列でソートされているかが分かるようにした。<br>
+  <br>
+  <b><u>2004/09/01 Ver1.5.3</u></b><br> 
+  ・バグ一覧でクライアントによりエクセル出力がうまくいかない場合がある、バグの修正。<br>
+  ・ブラウザがMozilla,Netscape,Firefox,Operaのとき、表示が乱れる（バグ詳細の入力欄が小さすぎる等）、バグの修正。<br>
+  <br>
+  <b><u>2004/06/05 Ver1.5.2</u></b><br>  
+  ・リリースログのソート順を昇順から降順に修正。<br>
+  ・リリースログで、相違点を表示するとエラーが発生する場合があるバグの修正。<br>
+  ・バグ曲線のX軸の数が重なって表示されるバグの修正。<br>
+  ・新規リリースでプロジェクト全体のとき、バージョン一覧に何も表示されないバグの修正。<br>
+  ・リリースログで前回のリリースと今現在の相違点がリリースしなくても見れるように修正。（開始と終了の行が表示される）<br>
+  ・バグ一覧にエクセル出力機能を追加。<br>
+  ・XML取込み機能を追加。<br>
+  ・ポストバックしたとき、追加・変更・削除対象の行にフォーカスがくるように修正。（ユーザーメンテ、プログラムメンテ、プロジェクトメンテ）<br>
+  ・プロジェクトメンテで&quot;新しいプロジェクトz&quot;という名があるとき、追加を行うと追加した行でない別の行が編集中になるバグの修正。<br>
+  ・ユーザーメンテで、既に存在するユーザーと同じユーザーＩＤを入力して登録するとエラーが発生するバグの修正。<br>
+  ・インストール／アンイントールスクリプトを付属。<br>
+  <br>
+  <b><u>
+  2003/12/31 Ver1.0.1</u></b><br>  
+  ・プロジェクト単位でリリースできるように修正<br>
+  ・ボタンを上にも追加（バグ追加・バグ詳細・バグ一覧・バグ検索）<br>
+  ・初回のログインでは必ずプロジェクトメンテにナビゲートされるバグを修正<br>
+  ・メニューにサポートを追加<br>
+  <br>
+  <b><u>
+  2003/12/01 Ver1.0.0</u></b><br>      
+  ・新規リリース</font></p>
+
+</blockquote>
+
+</body>
+
+</html>

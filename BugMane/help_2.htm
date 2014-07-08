@@ -1,0 +1,279 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>第２章 導入</title>
+</head>
+
+<body>
+
+<p><font size="4" color="#0000FF"><b>第２章　導入</b></font></p>
+<hr>
+<p><b><a name="動作環境">動作環境</a></b></p>
+<blockquote>
+  <p><font size="2"><u><b>サーバー</b></u><br>
+  ○ Windows 2000 (SP3) / Windows XP Professional (SP1) / Windows                             
+  Server 2003<br>                            
+  ○ Internet Information Server 5.0<br>                       
+  </font><font size="2">○ .NET Framework 1.1<br>                       
+  ○ SQL Server 7.0　又はMicrosoft                             
+  Desktop Engine (MSDE) 2000<br>         
+  <br>
+  <b><u>クライアント</u></b><br>             
+  ○Internet Explorer 5.0以上 (他のブラウザでも動作すると思いますが、動作は未確認です)<br>                           
+  <br>
+  ※MSDEはSQL Serverと完全互換のデータベースエンジンで、マイクロソフトのサイトよりダウンロードできます。<br>         
+  ※クライアントとサーバーを、1台のマシンにすることも可能です。</font></p>    
+</blockquote>
+<p><b><a name="インストール">インストール</a></b></p>
+<blockquote>
+  <p><font size="2"><u><b>前提条件</b></u><br>
+  IIS、.NET Framwork、SQL Server はインストール済みであるものとします。<br>                    
+  【注意】まずIISをインストールし、次に.NET Frameworkをインストールします。これを逆にすると、ASP.NETを個別に再度インストールする必要があります。<br>             
+  <br>
+  <u><b>確認事項</b></u><br>
+  SQL Serverのサービス、IISの既定のWEBサイトのサービスが開始されていることを確認します。<br>         
+  【注意】</font><font size="2">すでに「バグまね」がインストールされている場合は、<a href="#インストール（アップデート）">インストール（アップデート）</a>の手順で行ってください。（DBが上書きされます）<br>
+  <br>
+  インストール作業は管理者権限のあるユーザーで行ってください。<br>
+  <br>
+  <b><u>手順</u></b>
+  <br>
+  (1)適当なフォルダを作成し、BugManager.v???.lzhを解凍します。（???はバージョン番号）<br>
+  <br>
+  (2)Setup.vbsをメモ帳等で開き、以下の赤い個所をご使用の環境に合わせて設定します。</font></p>
+  <table border="1" width="80%">
+    <tr>
+      <td width="50%"><font size="2">'------------------------------------------------------------------------------<br>
+        ' バグまね　インストールスクリプト<br>
+        ' 2004.05.28 TaopSoft<br>        
+        '------------------------------------------------------------------------------<br>
+        '==============================================================================<br>
+        ' &lt;&lt; 設定項目 >> (↓ここから)<br>        
+        '==============================================================================<br>
+        'インストール先（""の場合は、inetpub\wwwroot\bugmになります）<br>
+        const InstPath = <font color="#FF0000"> ""　</font><font color="#0000FF">←①</font><br>       
+        '仮想ディレクトリのエイリアス<br>
+        const Alias = &quot;<font color="#FF0000">bugm</font>&quot;<font color="#FF0000">　</font><font color="#0000FF">←②</font><br>       
+        'コンピュータ名<br>
+        const CompName = &quot;<font color="#FF0000">ComputerName</font>&quot;<font color="#FF0000">　</font><font color="#0000FF">←③</font><br>       
+        'SQL Server のサーバー名<br>        
+        const SQLServerName = &quot;<font color="#FF0000">(local)</font>&quot;<font color="#FF0000">　</font><font color="#0000FF">←④</font><br>       
+        '==============================================================================<br>
+        ' &lt;&lt; 設定項目 >> (↑ここまで)<br>        
+        '==============================================================================<br>
+        ．．．（以下省略）</font></td>
+    </tr>
+  </table>
+  <p><font size="2">説明<br>
+  ①インストール先：バグまねをインストールするパスを指定します。未指定(&quot;&quot;)の場合は&quot;inetpub\wwwroot\bugm&quot;になります。<br>
+  ②仮想ディレクトリのエイリアス：</font><font size="2">このエイリアスがURLの赤い部分になります。（例：http://localhost/<font color="#FF0000">bugm</font>/Default.aspx)
+  </font><font size="2"><br>
+  ③コンピュータ名：インストール先のコンピュータ名を指定します。（[マイコンピュータ]－[プロパティ]－[ネットワークＩＤ]タブで確認できます）<br>
+  ④SQL Serverのサーバー名：SQL Serverサービスマネージャのサーバーを指定します。（例：(local)\VSdotNet）<br>     
+  <br>
+  (3)Setup.vbsを保存し、ダブルクリックして実行します。<br>
+  <br>
+  (4)「バグまねをインストールします。よろしいですか？」と表示されますので、「はい」を選択します。<br>
+  <img border="0" src="images/inst1.png" width="298" height="114"><br>
+  <br>
+  (5)「ファイルコピー」でＯＫをクリックします。<br>
+  <img border="0" src="images/inst2.png" width="148" height="94"><br>
+  <br>
+  (6)「仮想ディレクトリ作成」でＯＫをクリックします。<br>
+  <img border="0" src="images/inst3.png" width="148" height="94"><br>
+  <br>
+  (7)「DB作成」でＯＫをクリックします。<br>
+  <img border="0" src="images/inst4.png" width="148" height="94"><br>
+  <br>
+  (8)しばらくして、以下の画面が表示されましたら、ファイルのインストールは終了です。<br>
+  <img border="0" src="images/inst5.png" width="148" height="94"><br>
+  <br>
+  (9)次に、web.configを設定します。<br>
+  【注意】指定された個所以外は変更しないでください。動作しなくなる恐れがあります。変更前にバックアップを取られることをお勧めします。<br>
+  <br>
+  <b><u>Windows NT認証の場合</u></b><br> 
+  SQL Server の接続情報（以下の赤い部分）を設定します。</font></p>     
+  <table border="1" width="90%">
+    <tr>
+      <td width="100%"><font size="2">&lt;configuration&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;appSettings&gt;<br>                    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add key="Database" value="data source=<font color="#FF0000">localhost</font>;initial catalog=Bugs;Trusted_Connection=yes;persist security info=True;workstation id=<font color="#FF0000">localhost</font>;packet size=4096" /><br>                   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000"> &lt;!--add      
+        key=&quot;Database&quot; value=&quot;data source=machine_name;initial      
+        catalog=Bugs;password=pass;persist security info=True;user id=sa;workstation      
+        id=machine_name;packet size=4096&quot; /--&gt;</font></font></td>                   
+    </tr>
+  </table>
+  <p><font size="2"><b><u>SQL Server認証の場合</u></b><br>     
+  上の部分をコメントアウトし、以下の赤い部分を設定します。</font></p>
+  <table border="1" width="90%">
+    <tr>
+      <td width="100%"><font size="2">&lt;configuration&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;appSettings&gt;<br>                   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#008080"> </font><font color="#008000">&lt;!--add key="Database" value="data source=localhost;initial catalog=Bugs;Trusted_Connection=yes;persist security info=True;workstation id=localhost;packet size=4096" 
+        /--&gt;</font><br>             
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add                   
+        key=&quot;Database&quot; value=&quot;data source=<font color="#FF0000">machine_name</font>;initial                   
+        catalog=Bugs;password=<font color="#FF0000">pass</font>;persist security info=True;user id=<font color="#FF0000">sa</font>;workstation                   
+        id=<font color="#FF0000">machine_name</font>;packet size=4096&quot; /&gt;</font></td>                   
+    </tr>
+  </table>
+  <p><font size="2"><br>
+  バグまねで使用する作業フォルダ（以下の赤い部分）を設定します。<br>   
+  &nbsp;※作業フォルダには一時的に添付ファイル等が置かれます。</font></p>
+  <table border="1" width="90%">
+    <tr>
+      <td width="100%"><font size="2">&lt;configuration&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;appSettings&gt;<br>                   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add key="TempPath"                   
+        value=&quot;<font color="#FF0000">d:\temp\</font>&quot; /></font></td>                    
+    </tr>
+  </table>
+  <p><font size="2">以上でインストールは完了です。<br>
+  <br>
+  Internet Explorerを起動し、アドレス欄に「http://localhost/<font color="#FF0000">bugm</font>/Default.aspx」と入力します。<br>                
+  ※bugm（赤い文字）の部分は仮想ディレクトリのエイリアスにより変わります。<br>
+  ※他のマシンからアクセスする場合は、localhostの部分をドメイン名、マシン名、又はIPアドレスにします。<br>
+  「http://www.taopsoft.com/bugm/Default.aspx」<br>
+  「http://machinename/bugm/Default.aspx」<br>
+  「http://192.168.1.2/bugm/Default.aspx」<br>
+  <br>
+  正しくセットアップされていると以下の画面が表示されます。<br>
+  <img border="0" src="images/install5.png" width="654" height="563"><br>
+  <br>
+  使用するにはまず、ユーザーを作成します。設定メニューの「ユーザーメンテ」を選択します。<br>
+  ※ログイン時のユーザーIDには bm 、パスワードは bmpass                
+  と入力します。（プロジェクトは未選択でOKです）
+  <br>
+  <br>
+  次に、プロジェクトを新規作成します。設定メニューの「プロジェクトメンテ」を選択します。<br>
+  プロジェクトを追加したら「ユーザーの編集」ボタンをクリックし、作成したプロジェクトに参加するユーザーを設定します。<br>
+  【注意】プロジェクトに参加するユーザーを設定してない場合、正しいユーザーＩＤ／パスワードであっても追加したプロジェクトにログインすることができません。もし、プロジェクトに参加するユーザーの設定を忘れてしまった場合は、ログイン時のプロジェクトを未選択にし、正しいユーザーＩＤ／パスワードでログインします。プロジェクトを未選択にした時は、プロジェクトメンテとユーザーメンテのみが使用できます。プロジェクトメンテで「ユーザーの編集」をクリックし、プロジェクトに参加するユーザーを設定してください。<br>
+  <br>
+  一旦ログアウトし、あとは、作成したプロジェクト、ユーザーID/パスワードでプログラムを追加し、バグを登録していきます。<br>
+  </font></p>
+</blockquote>
+<p><b><a name="インストール（手動）">インストール（手動）</a></b></p>
+<blockquote>
+  <p><font size="2">インストールスクリプトによるセットアップがうまくいかない場合は以下の手順でインストールします。<br>
+  <br>
+  (1)適当なフォルダを作成し、BugManager.v???.lzhを解凍します。（???はバージョン番号）<br>
+  <br>
+  (2)インストール先フォルダを作成し、BugManagerフォルダ以下をコピーします。<br>
+  <br>
+  (3)IISの仮想ディレクトリを作成します。<br>
+  &nbsp;インターネットサービスマネージャを起動します。<br>                
+  ［操作］メニュー－［新規作成］－［仮想ディレクトリ］を選択します。<br>
+  <img border="0" src="images/install1.png" width="640" height="452"><br>
+  <br>
+  仮想ディレクトリ作成ウィザードが起動します。<br>                
+  エイリアスには適当な名前を入力します。ここでは&quot;bugm&quot;としています。<br>                
+  このエイリアスがURLの赤い部分になります。（例：http://localhost/<font color="#FF0000">bugm</font>/Default.aspx)<br>                
+  <img border="0" src="images/install2.png" width="585" height="358"><br>
+  <br>
+  ディレクトリには(2)で作成したディレクトリ名を入力します。<br>                 
+  ここでは&quot;c:\bugmanager&quot;としています。<br>                 
+  <img border="0" src="images/install3.png" width="585" height="358"><br>
+  <br>
+  アクセス許可では、読み取りとASP等のスクリプトを実行するをチェックします。<br>
+  <img border="0" src="images/install4.png" width="585" height="358"><br>
+  <br>
+  (3)SQL Serverにバグまねデータベース（Bugs）を作成します。<br>    
+  SQLサーバー又はMSDEがインストールされているマシンでコマンドプロンプトを起動し、以下のコマンドを実行します。<br>               
+  ※すでにバグまねデータベースがある場合は上書きされますのでご注意ください。<br>
+  ※オプションの-E -S (local)はご使用の環境に合わせて変更してください。<br>              
+  <br>
+  &gt; osql -E -S (local) -i instBugs.sql<br>                   
+  <br>
+  <br>
+  (4)ASP.NETからバグまねDBへのアクセスを許可します。<br>
+  コマンドプロンプトを起動し、以下のコマンドを実行します。<br>
+  ※以下のコマンド内のMACHINENAMEの部分は作業中のマシン名に変更してください。<br>              
+  <br>
+  &gt; osql -E -S (local) -Q &quot;sp_grantlogin 'MACHINENAME\ASPNET'&quot;&nbsp;<br>                   
+  <br>
+  &gt; osql -E -S (local) -d Bugs -Q &quot;sp_grantdbaccess 'MACHINENAME\ASPNET'&quot;&nbsp;<br>                   
+  <br>
+  &gt; osql -E -S (local) -d Bugs -Q &quot;sp_addrolemember 'db_owner', 'MACHINENAME\ASPNET'&quot;<br>                   
+  <br>
+  (5)web.configを設定します。<br>
+  インストールの(9)以降を参照してください。</font></p>
+</blockquote>
+  <p><b><a name="インストール（アップデート）">インストール（アップデート）</a></b></p>
+<blockquote>
+  <p><font size="2">すでに「バグまね」がインストールされている環境に再度インストールする場合の手順を説明します。<br>
+  <br>
+  (1)適当なフォルダを作成し、BugManager.v???.lzhを解凍します。（???はバージョン番号）<br>
+  <br>
+  (2)「バグまね」のインストール先フォルダに、BugManagerフォルダ以下をコピーします。<br>
+  だたし、<font color="#FF0000">web.config </font>はコピーしないこと！<br>
+  ※web.configをコピーしますと設定情報、ライセンス情報等がなくなり、再度設定する必要があります。<br>
+  <br>
+  (3)SQL Serverのバグまねデータベースを更新します。<br>
+  SQLサーバー又はMSDEがインストールされているマシンでコマンドプロンプトを起動し、以下のコマンドを実行します。<br>               
+  ※instBugs.sqlでなくinstBugs<font color="#FF0000">2</font>.sqlのほうですのでご注意ください。<br>
+  ※オプションの-E -S (local)はご使用の環境に合わせて変更してください。<br>              
+  <br>
+  &gt; osql -E -S (local) -i instBugs2.sql<br>                  
+  </font></p>
+</blockquote>
+<p><b><a name="アンインストール">アンインストール</a></b></p>
+
+<blockquote>
+  <p><font size="2">(1)Remove.vbsをメモ帳等で開き、以下の赤い個所をインストール時に設定した内容にあわせます。</font></p>
+  <table border="1" width="80%">
+    <tr>
+      <td width="100%"><font size="2">'------------------------------------------------------------------------------<br>
+        ' バグまね　アンインストールスクリプト<br>
+        ' 2004.05.28 TaopSoft<br>   
+        '------------------------------------------------------------------------------<br>
+        '==============================================================================<br>
+        ' &lt;&lt; 設定項目 >> (↓ここから)<br>   
+        '==============================================================================<br>
+        'インストール先（""の場合は、inetpub\wwwroot\bugmになります）<br>
+        const InstPath = <font color="#FF0000"> ""</font><br>  
+        '仮想ディレクトリのエイリアス<br>
+        const Alias = "<font color="#FF0000">bugm</font>"<br>  
+        'SQL Server のサーバー名<br>   
+        const SQLServerName = &quot;<font color="#FF0000">(local)</font>&quot;<br>  
+        '==============================================================================<br>
+        ' &lt;&lt; 設定項目 >> (↑ここまで)<br>   
+        '==============================================================================<br>
+        ．．．（以下省略）</font></td>
+    </tr>
+  </table>
+  <p><font size="2">(2)Remove.vbsを保存し、ダブルクリックして実行します。
+  <br>
+  <img border="0" src="images/uninst1.png" width="316" height="114"><br>
+  <br>
+  (3)「仮想ディレクトリの削除」でOKをクリックします。
+  <br>
+  <img border="0" src="images/uninst2.png" width="148" height="94"><br>
+  <br>
+  (4)「フォルダ削除」でOKをクリックします。
+  <br>
+  <img border="0" src="images/uninst3.png" width="148" height="94"><br>
+  <br>
+  (5)「DB削除」でOKをクリックします。
+  <br>
+  <img border="0" src="images/uninst4.png" width="148" height="94"><br>
+  <br>
+  (6)以下の画面が表示されましたら、アンインストールは完了です。<br>
+  <img border="0" src="images/uninst5.png" width="148" height="94"><br>
+  <br>
+  <b><u>手動で削除する場合は</u></b><br>
+  インストール時に作成したフォルダを削除します。<br>
+  例）c:\BugManagerにインストールした場合、</font><font size="2">c:\BugManagerを削除します。<br>
+  <br>
+  インターネットサービスマネージャでインストール時に作成した仮想ディレクトリを削除します。<br>
+  <br>
+  SQL Serverのbugsデータベースを削除します。</font></p>
+</blockquote>
+
+</body>
+
+</html>

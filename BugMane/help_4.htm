@@ -1,0 +1,818 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>第４章 バグ管理</title>
+</head>
+
+<body>
+
+<p><font size="4" color="#0000FF"><b>第４章　バグ管理</b></font></p>
+<hr>
+<p><b><a name="新規バグ">新規バグ</a></b></p>
+<blockquote>
+  <p><img border="0" src="images/AddBug.png" width="586" height="591">
+  <br>
+  </p>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグを新規に登録する画面です。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグ管理メニューの［新規バグ］で表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0">
+  <font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">プログラムメンテで登録されたプログラム一覧がリストに表示されます。バグを発行するプログラムを１つ選択します。入力必須です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0">
+  <font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">プログラムのバージョンを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">複数の部品から構成されているプログラムの場合、バグが発生した部分を入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">要約</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの要約を入力します。入力必須です。最大文字数は100バイトです。（全角50文字、半角100文字）</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">詳細</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの詳細な情報を入力します。最大文字数は1000バイトです。（全角500文字、半角1000文字）</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">重要度</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度を選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">関連バグ</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">関連するバグがある場合に関連するバグのバグIDを入力します。複数ある場合はカンマで区切って入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグを対処する人を選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付資料</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ハードコピー等の画像ファイルやバグの再現に必要なファイルを添付します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処期限</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグを対処する期限を選択します。灰色の枠は本日日付です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したバージョンの一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したコンポーネント一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付資料</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">添付資料を編集する画面が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">登録ボタン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力内容を登録します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">クリアボタン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力内容を破棄し、空の画面を表示します。</font>
+      </td>
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+<p><b><a name="バグ一覧">バグ一覧</a></b></p>
+<blockquote>
+  <p><img border="0" src="images/BugList.png" width="813" height="322"><br>
+  </p>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグの一覧を表示する画面です。表示する項目(ID,プログラム,要約...)はオプションで変更することができます。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグ管理メニューの［バグ一覧］で表示されます。<br>
+  バグ管理メニューの［バグ検索］で検索条件を入力し、「検索」ボタンをクリックしたときも表示されます。<br>
+  リリース管理メニューの［リリースログ］で２行選択し、「相違点」ボタンをクリックしたときも表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">ID</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">バグを追加する度に割り振られる連番です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの発生したプログラムが表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">重要度</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの対処者です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">状態</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの状態です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処期限</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの対処期限です。対処期限が未入力の場合、空白が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">要約</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの要約です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">フィルタ</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">上部のドロップダウンで指定した条件のものだけ表示します。(例：状態がNewのものだけ）</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">タイトル</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">タイトル（ID、プログラム、重要度、対処者、状態、対処期限）をクリックするとクリックした項目で並び替えられます。再度同じタイトルをクリックすると昇順と降順が入れ替わります。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">ID</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">クリックするとバグ詳細画面が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">ページ</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ページを切り替えます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">再表示ボタン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">表示内容をリフレッシュ表示します。バグ詳細で内容を変更してもこの画面に反映されないときにクリックします。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">エクセル出力</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">表示中のバグ一覧をエクセルに出力します。</font>
+      </td>
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+<p><b><a name="バグ検索">バグ検索</a></b></p>
+
+<blockquote>
+<p><img border="0" src="images/SearchBug.png" width="673" height="657"><br>
+</p>
+
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグを検索する画面です。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグ管理メニューの［バグ検索］で表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バグID</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">バグIDで検索する場合に、検索したいバグのIDを入力します。範囲指定も可能です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">発生日付</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">発生日付で検索する場合に、検索したいバグの発生日付を選択します。範囲指定も可能です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">プログラムで検索する場合に、検索したいバグのプログラムを選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バージョンで検索する場合に、検索したいバグのバージョンを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">コンポーネントで検索する場合に、検索したいバグのコンポーネントを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">要約</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">要約で検索する場合に、要約の一部を入力します。複数の条件を入力するときは、単語と単語の間はスペースを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">詳細</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">詳細で検索する場合に、詳細の一部を入力します。複数の条件を入力するときは、単語と単語の間はスペースを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">対処者で検索する場合に、検索したいバグの対処者を選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">重要度</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">重要度で検索する場合に、検索したいバグの重要度を選択します。複数選択が可能です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">状態</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">状態で検索する場合に、検索したいバグの状態を選択します。複数選択が可能です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">変更日</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">過去ｎ日以内に変更されたものを検索するときに日数を選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">担当未就任</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">対処者が未入力のものを検索する場合にチェックします。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したバージョンの一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したコンポーネント一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">or/and検索</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">要約、又は詳細で検索するときに複数の検索条件を入力したときに、複数の検索条の一部を満たす（=or検索）のか、すべてを満たす（=and検索）のかを設定します。例えば、検索条件に&quot;画面&quot;と&quot;メモリ&quot;と入力し、or検索した場合、画面、又はメモリという文字を含むものが検索されます。and検索の場合は、画面、且つメモリという文字を含むものが検索されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">検索</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力した検索条件でバグの検索を開始します。検索条件が何も入力されてない場合はすべてのバグを検索します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">クリア</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力内容を破棄し、空の画面を表示します。</font>
+      </td>
+    </tr>
+  </table>
+<p>　</p>
+
+</blockquote>
+
+<p><b><a name="バグ詳細">バグ詳細</a></b></p>
+
+<blockquote>
+
+<p><img border="0" src="images/BugDetail.png" width="676" height="858"><br>
+</p>
+
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグの詳細な情報を表示し、内容を変更する画面です。<br>
+  新規追加されたバグに対して対処者の割り当て、対処内容の記入、確認結果の記入等はこの画面で行います。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">
+  バグ一覧でバグIDをクリックすることにより表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バグID</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">バグを追加する度に割り振られる連番です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">発生日付</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">新規バグでバグ票を登録した日時です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグが発生したプログラムです。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグが発生したプログラムのバージョンです。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグが発生したプログラム内の部分です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">要約</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの要約です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">詳細</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの詳細な情報です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">発見者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグを報告した人です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">状態</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの<a href="help_3.htm#5">状態</a>です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">重要度</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの<a href="help_3.htm#4">重要度</a>です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">関連バグ</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">このバグと関連のあるバグです。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグを対処する人です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付資料</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ハードコピー等の画像ファイルやバグの再現に必要な添付された資料です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処期限</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの対処期限です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">原因</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの原因を入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処内容</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">このバグを解決するために、どのような対処を行ったかを入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処に要した時間</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの対処に要した時間を入力します。<br>
+        1時間未満の場合、小数で入力します。（例：15分→0.25時間）</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処日時</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグを対処した日時です。バグの状態を解決済みにし、登録をクリックしたときの時間が自動でセットされます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">確認</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">解決済みバグの確認結果をOKかNGで入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">確認者</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグが解決されたことを確認した人です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">確認日時</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグが解決されたことを確認した日時です。バグの状態を確認済みにし、登録をクリックしたときの時間が自動でセットされます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">確認時コメント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">確認時のコメントがあれば記入します。例えば確認したがNGだった場合、なぜNGだったかを記入します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">バージョン</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したバージョンの一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">コンポーネント</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">ポップアップウインドウが表示され、今までに入力したコンポーネント一覧が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付資料</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">添付資料の編集画面が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">表示</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">選択中の添付資料を表示、又はダウンロードします。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">OK</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力した内容を登録します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">キャンセル</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力内容を破棄し、変更前の内容に戻します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">＜ (Prev)</font></td>    
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグ一覧で１つ前のバグを表示します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">＞ (Next)</font></td>    
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグ一覧で１つ後のバグを表示します。</font>
+      </td>
+    </tr>
+  </table>
+<p>　</p>
+
+</blockquote>
+
+<p><b><a name="添付資料">添付資料</a></b></p>
+
+<blockquote>
+<p><img border="0" src="images/EditAttach.png" width="676" height="380"><br>
+  </p>
+
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+        <font size="2">バグに添付された資料（画像ファイル等）を追加・削除する画面です。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">
+  ［新規バグ］の「添付資料」ボタン、<br>
+  ［バグ詳細］の「添付資料」ボタンで表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">ファイル</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">添付するファイル名を入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付資料一覧</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">添付されたファイルとファイルサイズが一覧で表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">参照</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">添付するファイルを選択するファイル選択ダイアログが表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">削除</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">添付資料一覧で選択中のファイルを削除します。複数選択が可能です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">添付</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">入力されたファイルを添付します。添付されたファイルは一覧に表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">戻る</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">前の画面（新規バグ、又はバグ詳細）に戻ります。</font>
+      </td>
+    </tr>
+  </table>
+<p>　</p>
+
+</blockquote>
+
+<p><b><a name="バグ曲線">バグ曲線</a></b></p>
+
+<blockquote>
+
+<p><font size="2"><img border="0" src="images/BugGraph.png" width="679" height="713"><br>
+</font></p>
+
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">発生したバグの累積件数をグラフで表示します。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグ管理メニューの［バグ曲線］で表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">バグ曲線を表示させるプログラムを選択します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">グラフ</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグ曲線です。X軸は日数、Y軸はバグの累積件数です。<br>
+        赤線：発見したバグの累積件数<br>
+        青線：除去したバグの累積件数<br>
+        緑線：実績値（赤線）を元に今後の予想を表すゴンベルツ曲線<br>
+        上記の例では、あとバグが12.4件残っていて、収束するのが61日ごろということです。</font>
+      </td>
+    </tr>
+  </table>
+
+<p>　</p>
+
+</blockquote>
+
+<p><b><a name="工数集計">工数集計</a></b></p>
+
+<blockquote>
+
+<p><font size="2"><img border="0" src="images/ManHour.png" width="679" height="472"><br>
+</font></p>
+
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグの対処に要した時間を集計する画面です。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">バグ管理メニューの［工数集計］で表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">集約区分</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">集計する単位を以下の中から選択します。<br>
+  ○プログラム：例えば、Aというプログラムの対処に要した時間が調べられます。<br>
+  </font>
+  <font size="2">○</font><font size="2">日付＋プログラム：例えば、本日、Aというプログラムの対処に要した時間が調べられます。<br>
+  </font>
+  <font size="2">○</font><font size="2">日付：例えば、10/15に対処に要した時間が調べられます。<br>
+  </font>
+  <font size="2">○</font><font size="2">月＋プログラム：例えば、10月にAというプログラムの対処に要した時間が調べられます。<br>
+  </font>
+  <font size="2">○</font><font size="2">月：月ごとの対処に要した時間が調べられます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">対処日付</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">対処日付が表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">プログラム</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">プログラムが表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">要望</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が要望のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">小欠陥</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が小欠陥のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">中欠陥</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が中欠陥のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">大欠陥</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が大欠陥のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">重大</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が重大のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">極めて重大</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">バグの重要度が極めて重大のものの対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">計</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">合計の対処時間が表示されます。単位は時間です。</font>
+      </td>
+    </tr>
+  </table>
+
+<p>　</p>
+
+</blockquote>
+
+</body>
+
+</html>

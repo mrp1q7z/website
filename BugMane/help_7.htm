@@ -1,0 +1,262 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>第７章 その他</title>
+</head>
+
+<body>
+
+<p><font size="4" color="#0000FF"><b>第７章　その他</b></font></p>
+<hr>
+<p><b><a name="ログアウト">ログアウト</a></b></p>
+<blockquote>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">ログアウトし、［ようこそ］画面に戻ります。</font></td>
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+
+<p><b><a name="XML取込">XML取込</a></b></p>
+<blockquote>
+  <p><font size="2"><img border="0" src="images/ImpXml.png" width="678" height="178"><br>
+  </font></p>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">XML形式のバグ情報をバグまねに取込みます。エクセル形式のバグ情報を取込む場合は、以下を参照してください。</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">画面遷移</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">その他メニューの［XML取込］で表示されます。</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="16" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">項目説明</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">XMLファイル</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+  <font size="2">XMLファイル名を入力します。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">取込先プロジェクト</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">取込先プロジェクトを選択します。<br>
+        ・既存のプロジェクトに追加するには、既存のプロジェクトを選択し、上書きモードのチェックをOFFにします。<br>
+        ・既存のプロジェクトをXMLの内容に置き換えるには、既存のプロジェクトを選択し、上書きモードをONにします。<br>
+        ・新規プロジェクトとして取込むには、取込先プロジェクトを未選択にします。上書きモードはどちらでも同じです。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">上書きモード</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">チェックをOFFにしますと、取込先プロジェクトに追加されます。</font>
+        <font size="2"><br>
+        チェックをONにしますと、バグ情報・リリース情報等はすべて削除され、XMLの内容に置き換えられます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" height="1" bgcolor="#C0C0C0" colspan="2">
+        <p align="center"><font size="2">操作説明</font></td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">参照</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">XMLファイルを選択するファイル選択ダイアログが表示されます。</font>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" height="1" bgcolor="#C0C0C0"><font size="2">実行</font></td>
+      <td width="85%" height="1" bgcolor="#FFFFFF">
+        <font size="2">XML取込を開始します。</font>
+      </td>
+    </tr>
+  </table>
+  <p><font size="2">●バグIDは振りなおされます。<br>
+  例：既存のプロジェクトに１０件のバグ情報があった場合、バグID11～として取り込まれます。<br>
+  <br>
+  ●新規プロジェクトとして取り込んだ場合、”取込_新しいプロジェクト”という名前のプロジェクトが作成されます。<br>
+  取り込み後に適切な名前のプロジェクトに変えてください。また、プロジェクトに参加するユーザーも設定されていません<br>
+  ので、プロジェクトメンテのユーザーの編集で参加するユーザーを設定してください。<br>
+  <br>
+  ●XMLデータで出現したプログラム、ユーザーがマスタになければ自動で登録されます。<br>
+  <br>
+  ●ライセンス未登録の場合は、１００件までしか取り込むことはできません。<br>
+  </font><u><b><font size="2"><br>
+  エクセル形式のバグ情報を取り込むには<br>
+  </font></b></u><font size="2">エクセル形式のバグ情報を直接取込むことはできません。一旦XMLに変換してください。<br>
+  エクセル→XML変換は、有償・無償のツールがたくさんありますのでそちらで変換してください。<br>
+  <br>
+  以下はサンプルファイルです。<br>
+  <br>
+  <a href="sample.xls">元のエクセルファイル<br>
+  <br>
+  </a><a href="sample.xml">変換後のXMLファイル</a><br>
+  <br>
+  <br>
+  <br>
+  <b><u>XMLタグ一覧</u></b></font></p>
+  <table border="1" width="80%">
+    <col width="107" style="mso-width-source:userset;mso-width-alt:3424;width:80pt">
+    <col width="156" style="mso-width-source:userset;mso-width-alt:4992;width:117pt">
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl24" width="20%" style="height:13.5pt;width:80pt" bgcolor="#C0C0C0"><font size="2">タグ</font></td>
+      <td class="xl24" width="80%" style="border-left:none;width:117pt" bgcolor="#C0C0C0"><font size="2"><ruby>
+        説明<span style="display:none"><rt>
+        </rt>
+        </span></ruby>
+        </font></td>
+    </tr>
+    <tr height="19" style="height:14.25pt">
+      <td height="19" class="xl25" style="height:14.25pt;border-top:none" width="20%"><font size="2">ROWSET</font></td>
+      <td class="xl25" style="border-top:none;border-left:none" width="80%"><font size="2">行の集合。バグ情報全体をこのタグでくくります。</font></td>
+    </tr>
+    <tr height="19" style="height:14.25pt">
+      <td height="19" class="xl25" style="height:14.25pt;border-top:none" width="20%"><font size="2">ROW</font></td>
+      <td class="xl25" style="border-top:none;border-left:none" width="80%"><font size="2">バグ情報１件ごとに、このタグでくくります。</font></td>
+    </tr>
+    <tr height="19" style="height:14.25pt">
+      <td height="19" class="xl25" style="height:14.25pt;border-top:none" width="20%"><font size="2">bug_id</font></td>
+      <td class="xl25" style="border-top:none;border-left:none" width="80%"><font size="2">バグIDを記述します。取り込み時に振りなおされますが、エラー個所の特定時に必要です。</font><br>
+        <font size="2">例）バグID99のプログラム名が長すぎる場合、以下のようなエラーが出力されます。<br>
+        →「bug_id99:プログラム名の文字数がオーバーしています。(32byteを超えました)」</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">program_name</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">プログラム名を記述します。同じプログラムは同じ名前にしてください。<br>
+        &quot;プログラムa&quot;と&quot;プログラムA&quot;と記述しますと、プログラムマスタには2件登録されます。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">program_memo</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">プログラム説明を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">priority_name</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">以下のいずれかで、重要度を記述します。<br>
+        要望/小欠陥/中欠陥/大欠陥/重大/極めて重大</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">carer</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">対処者を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">status_name</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">以下のいずれかで、状態を記述します。<br>
+        New/担当就任/再開/解決済み/確認済み/終結</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">deadline</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">対処期限を&quot;YYYY/MM/DD&quot;で記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">summary</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">要約を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">find_date</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">発生日時を&quot;YYYY/MM/DD     
+        HH:MM:SS&quot;で記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">version</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">バージョンを記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">component</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">コンポーネントを記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">detail</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">詳細を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">finder</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">発見者を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">relation_bug</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">関連バグのバグIDを記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">cause</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">原因を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">care_detail</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">対処内容を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">care_clocking</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">対処に要した時間を記述します。単位は時間です。30分の場合は0.5</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">care_date</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">対処日時</font><font size="2">を&quot;YYYY/MM/DD     
+        HH:MM:SS&quot;で記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">ok_flg</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">確認がOKかどうかを記述します。OK又はNGのいずれか。（半角の大文字で記述してください）</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">checker</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">確認者を記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">check_date</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">確認日時</font><font size="2">を&quot;YYYY/MM/DD     
+        HH:MM:SS&quot;で記述します。</font></td>
+    </tr>
+    <tr height="18" style="height:13.5pt">
+      <td height="18" class="xl26" style="height:13.5pt;border-top:none" width="20%"><font size="2">comment</font></td>
+      <td class="xl26" style="border-top:none;border-left:none" width="80%"><font size="2">確認時コメントを記述します。</font></td>
+    </tr>
+  </table>
+  <p><font size="2"><br>
+  </font></p>
+</blockquote>
+
+<p><b><a name="ヘルプ">ヘルプ</a></b></p>
+<blockquote>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">このヘルプを表示します。</font></td>
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+
+<p><b><a name="サポート">サポート</a></b></p>
+<blockquote>
+  <table border="0" width="90%" height="1" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080" bgcolor="#808080" cellpadding="2">
+    <tr>
+      <td width="15%" height="13" bgcolor="#C0C0C0">
+  <font size="2">概要</font></td>
+      <td width="85%" height="13" bgcolor="#FFFFFF">
+  <font size="2">４時起きソフトのホームページが表示されます。バグまねのバグ・ご意見・ご感想などは、BBSまで。</font></td>
+    </tr>
+  </table>
+  <p>　</p>
+</blockquote>
+
+</body>
+
+</html>
